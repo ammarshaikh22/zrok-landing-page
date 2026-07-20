@@ -23,7 +23,16 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 
-const technologies = ["OpenAI", "n8n", "Make", "Zapier", "Airtable", "HubSpot", "Slack", "Google Workspace"];
+const technologies = [
+  { name: "OpenAI", logo: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/openai/default.svg" },
+  { name: "n8n", logo: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/n8n/default.svg" },
+  { name: "Make", logo: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/make/default.svg" },
+  { name: "Zapier", logo: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/zapier/default.svg" },
+  { name: "Airtable", logo: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/airtable/default.svg" },
+  { name: "HubSpot", logo: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/hubspot/default.svg" },
+  { name: "Slack", logo: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/slack/default.svg" },
+  { name: "Google Workspace", logo: "/google.png" },
+];
 
 const problems = [
   ["Manual Work", "Teams spend too much time on repetitive tasks that automation can eliminate.", Settings2],
@@ -81,7 +90,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 py-12"><div className="mx-auto max-w-[1320px] px-6 lg:px-10"><p className="mb-7 text-center text-xs font-medium uppercase tracking-[.2em] text-white/35">Trusted Technologies</p><div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">{technologies.map((tech) => <div key={tech} className="flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/[.025] text-sm font-semibold text-white/60">{tech}</div>)}</div></div></section>
+      <section className="border-y border-white/10 py-12"><div className="mx-auto max-w-[1320px] px-6 lg:px-10"><p className="mb-7 text-center text-xs font-medium uppercase tracking-[.2em] text-white/35">Trusted Technologies</p><div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">{technologies.map((tech) => <div key={tech.name} className="flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/[.025] text-sm font-semibold text-white/60"><Image src={tech.logo} alt={tech.name} width={150} height={150}  className={`h-8 w-8 object-contain ${tech.name == "Google Workspace" ? "w-28":"h-28"}`} /></div>)}</div></div></section>
 
       <section id="solutions" className="section"><div className="container-zrok"><SectionTitle eyebrow="The opportunity" title="Problems we solve" description="Turn the operational friction slowing your business into systems that create momentum." /><div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">{problems.map(([title, text, Icon]) => <article key={title as string} className="dark-card p-6"><Icon size={20} className="text-[#2563EB]" /><h3 className="mt-9 text-base font-semibold">{title as string}</h3><p className="mt-3 text-sm leading-6 text-white/50">{text as string}</p></article>)}</div></div></section>
 
