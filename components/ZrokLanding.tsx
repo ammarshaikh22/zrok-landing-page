@@ -78,9 +78,9 @@ export default function Index() {
           <a href="#home" className="flex items-center gap-2 text-xl font-bold tracking-[-0.06em]"><Image src="/logo.png" alt="" width={100} height={100}/></a>
           <nav className="hidden items-center gap-9 text-sm text-black md:flex"><a href="#services" className="nav-link">Services</a><a href="#solutions" className="nav-link">Solutions</a><a href="#about" className="nav-link">About</a><a href="#contact" className="nav-link">Contact</a></nav>
           <a href="#contact" className="button-primary hidden md:inline-flex">Book a Free Call <ArrowRight size={15} /></a>
-          <button className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X size={20} /> : <Menu size={20} />}</button>
+          <button className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X size={20} color="black" /> : <Menu size={20} color="black" />}</button>
         </div>
-        {menuOpen && <nav className="border-t border-white/10 bg-[#111111] px-6 py-5 md:hidden"><div className="mx-auto flex max-w-[1320px] flex-col gap-4 text-sm text-white/70"><a href="#services" onClick={() => setMenuOpen(false)}>Services</a><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a><a href="#contact" className="button-primary mt-2 justify-center">Book a Free Call</a></div></nav>}
+        {menuOpen && <nav className="border-t border-white/10 bg-[#fff] px-6 py-5 md:hidden"><div className="mx-auto flex max-w-[1320px] flex-col gap-4 text-sm text-black"><a href="#services" onClick={() => setMenuOpen(false)}>Services</a><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a><a href="#contact" className="button-primary mt-2 justify-center">Book a Free Call</a></div></nav>}
       </header>
 
       <section id="home" className="grid-pattern flex min-h-screen items-center pt-20">
