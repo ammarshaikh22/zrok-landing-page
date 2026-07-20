@@ -73,14 +73,14 @@ export default function Index() {
 
   return (
     <main className="bg-[#111111] text-white selection:bg-[#2563EB]">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#fff]/90 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-50 bg-[#fff] backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-[1320px] items-center justify-between px-6 lg:px-10">
           <a href="#home" className="flex items-center gap-2 text-xl font-bold tracking-[-0.06em]"><Image src="/logo.png" alt="" width={100} height={100}/></a>
           <nav className="hidden items-center gap-9 text-sm text-black md:flex"><a href="#services" className="nav-link">Services</a><a href="#solutions" className="nav-link">Solutions</a><a href="#about" className="nav-link">About</a><a href="#contact" className="nav-link">Contact</a></nav>
           <a href="#contact" className="button-primary hidden md:inline-flex">Book a Free Call <ArrowRight size={15} /></a>
-          <button className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X size={20} color="black" /> : <Menu size={20} color="black" />}</button>
+          <button className="grid h-10 w-10 place-items-center  md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X size={20} color="black" /> : <Menu size={20} color="black" />}</button>
         </div>
-        {menuOpen && <nav className="border-t border-white/10 bg-[#fff] px-6 py-5 md:hidden"><div className="mx-auto flex max-w-[1320px] flex-col gap-4 text-sm text-black"><a href="#services" onClick={() => setMenuOpen(false)}>Services</a><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a><a href="#contact" className="button-primary mt-2 justify-center">Book a Free Call</a></div></nav>}
+        {menuOpen && <nav className=" bg-[#fff] px-6 py-5 md:hidden"><div className="mx-auto flex max-w-[1320px] flex-col gap-4 text-sm text-black"><a href="#services" onClick={() => setMenuOpen(false)}>Services</a><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a><a href="#contact" className="button-primary mt-2 justify-center">Book a Free Call</a></div></nav>}
       </header>
 
       <section id="home" className="grid-pattern flex min-h-screen items-center pt-20">
