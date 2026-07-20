@@ -216,7 +216,7 @@ function Index() {
                 className: "fixed inset-x-0 top-0 z-50 bg-[#fff] backdrop-blur-xl",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$7_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mx-auto flex h-20 max-w-[1320px] items-center justify-between px-6 lg:px-10",
+                        className: "mx-auto flex h-20 max-w-[1320px] items-center justify-between px-2 lg:px-10",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$7_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                 href: "#home",
@@ -330,7 +330,7 @@ function Index() {
                         columnNumber: 9
                     }, this),
                     menuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$7_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-                        className: " bg-[#fff] px-6 py-5 md:hidden",
+                        className: " bg-[#fff] px-10 py-5 md:hidden",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$7_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mx-auto flex max-w-[1320px] flex-col gap-4 text-sm text-black",
                             children: [
@@ -341,7 +341,7 @@ function Index() {
                                 }, void 0, false, {
                                     fileName: "[project]/components/ZrokLanding.tsx",
                                     lineNumber: 83,
-                                    columnNumber: 149
+                                    columnNumber: 150
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$7_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "#solutions",
@@ -350,7 +350,7 @@ function Index() {
                                 }, void 0, false, {
                                     fileName: "[project]/components/ZrokLanding.tsx",
                                     lineNumber: 83,
-                                    columnNumber: 216
+                                    columnNumber: 217
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$7_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "#about",
@@ -359,7 +359,7 @@ function Index() {
                                 }, void 0, false, {
                                     fileName: "[project]/components/ZrokLanding.tsx",
                                     lineNumber: 83,
-                                    columnNumber: 285
+                                    columnNumber: 286
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$7_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "#contact",
@@ -368,7 +368,7 @@ function Index() {
                                 }, void 0, false, {
                                     fileName: "[project]/components/ZrokLanding.tsx",
                                     lineNumber: 83,
-                                    columnNumber: 346
+                                    columnNumber: 347
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$7_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "#contact",
@@ -377,13 +377,13 @@ function Index() {
                                 }, void 0, false, {
                                     fileName: "[project]/components/ZrokLanding.tsx",
                                     lineNumber: 83,
-                                    columnNumber: 411
+                                    columnNumber: 412
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ZrokLanding.tsx",
                             lineNumber: 83,
-                            columnNumber: 70
+                            columnNumber: 71
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ZrokLanding.tsx",

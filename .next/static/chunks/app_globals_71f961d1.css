@@ -814,6 +814,10 @@ body {
   max-width: 36rem;
 }
 
+.max-w-\[1340px\] {
+  max-width: 1340px;
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -1144,6 +1148,26 @@ body {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .pb-6 {
