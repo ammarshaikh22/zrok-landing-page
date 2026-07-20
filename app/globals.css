@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 6.7%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 9.5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 9.5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 221 83% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 221 83% 53%;
+    --radius: 1rem;
+  }
+
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground antialiased; font-family: "Inter", sans-serif; }
+}
+
+@layer components {
+  .container-zrok { @apply mx-auto max-w-[1320px] px-6 lg:px-10; }
+  .section { @apply px-0 py-24 lg:py-[140px]; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[.18em] text-[#6B7280]; }
+  .section-title { @apply text-4xl font-bold tracking-[-.055em] text-white sm:text-5xl lg:text-6xl; }
+  .section-copy { @apply max-w-xl text-base leading-7 text-white/55; }
+  .button-primary { @apply inline-flex items-center gap-2 rounded-lg bg-[#2563EB] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2563EB]/85; }
+  .button-secondary { @apply inline-flex items-center gap-2 rounded-lg border border-white/15 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10; }
+  .dark-card { @apply rounded-2xl border border-white/10 bg-white/[.025] transition-colors hover:border-white/20; }
+  .form-input { @apply w-full rounded-lg border border-white/15 bg-white/[.025] px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/25 focus:border-[#2563EB]; }
+  .social { @apply grid h-9 w-9 place-items-center rounded-lg border border-white/15 text-white/65 transition-colors hover:border-[#2563EB] hover:text-white; }
+  .nav-link { @apply transition-colors hover:text-white; }
+}
+
+.grid-pattern { background-image: linear-gradient(to right, rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 72px 72px; }
+.dashboard-shadow { box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 80px rgba(37,99,235,.09); }
