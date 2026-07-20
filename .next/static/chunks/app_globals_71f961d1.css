@@ -786,6 +786,10 @@ body {
   width: 7rem;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -1473,6 +1477,14 @@ body {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-28 {
+    height: 7rem;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
   }
 
   .md\:grid-cols-4 {

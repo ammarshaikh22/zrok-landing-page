@@ -885,7 +885,7 @@ function Index() {
                                         alt: tech.name,
                                         width: 150,
                                         height: 150,
-                                        className: `h-8 w-8 object-contain ${tech.name == "Google Workspace" ? "w-28" : "h-28"}`
+                                        className: ` object-contain ${tech.name == "Google Workspace" ? "w-24 md:w-28 md:h-28" : "h-8 w-8"}`
                                     }, void 0, false, {
                                         fileName: "[project]/components/ZrokLanding.tsx",
                                         lineNumber: 93,
