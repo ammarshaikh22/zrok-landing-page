@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Zrok — AI Automation for Modern Businesses",
+  title: "ZrokLabs",
   description: "Intelligent automation, AI agents, and connected workflows for ambitious teams.",
 };
 

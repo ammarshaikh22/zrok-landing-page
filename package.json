@@ -2,19 +2,20 @@
   "name": "fusion-starter",
   "private": true,
   "type": "module",
- "scripts": {
-  "dev": "next dev --turbopack",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "typecheck": "tsc --noEmit",
-  "format": "prettier --check .",
-  "format:fix": "prettier --write ."
-},
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write ."
+  },
   "dependencies": {
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "next": "15.5.7",
+    "next": "^15.5.20",
+    "nodemailer": "^9.0.3",
     "zod": "^3.25.76"
   },
   "devDependencies": {
