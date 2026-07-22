@@ -104,46 +104,14 @@ const problems = [
 ];
 
 const services = [
-  [
-    "AI Agents",
-    "Intelligent agents that reason, act, and keep work moving.",
-    Bot,
-  ],
-  [
-    "Workflow Automation",
-    "Reliable flows built around how your business operates.",
-    Zap,
-  ],
-  [
-    "AI Chatbots",
-    "Helpful, on-brand conversations at every customer touchpoint.",
-    MessageSquareText,
-  ],
-  [
-    "CRM Automation",
-    "Keep customer data clean, current, and ready to use.",
-    Database,
-  ],
-  [
-    "Sales Automation",
-    "Give your sales team more time for high-value conversations.",
-    Handshake,
-  ],
-  [
-    "Marketing Automation",
-    "Build campaigns that personalize and perform at scale.",
-    Sparkles,
-  ],
-  [
-    "API Integrations",
-    "Connect the products your team already depends on.",
-    PlugZap,
-  ],
-  [
-    "Custom AI Solutions",
-    "Purpose-built systems for your most valuable opportunities.",
-    Code2,
-  ],
+  ["AI Agents", Bot],
+  ["Workflow Automation", Zap],
+  ["AI Chatbots", MessageSquareText],
+  ["Email Automation", Database],
+  ["Lead Generation Automation", Handshake],
+  ["CRM Integrations", Sparkles],
+  ["Data & Reporting Automation", PlugZap],
+  ["Custom AI Solutions", Code2],
 ];
 
 const industries = [
@@ -328,7 +296,7 @@ export default function Index() {
         id="home"
         className="grid-pattern flex min-h-screen items-center pt-20"
       >
-        <div className="mx-auto grid w-full max-w-[1320px] items-center gap-16 px-6 py-20 lg:grid-cols-12 lg:px-10">
+        <div className="mx-auto grid w-full max-w-[1320px] items-center gap-16 px-6 md:py-20 py-14 lg:grid-cols-12 lg:px-10">
           <div className="lg:col-span-6">
             <p className="eyebrow">
               <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
@@ -468,7 +436,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="solutions" className="section">
+      <section id="solutions" className="py-16 md:py-20">
         <div className="container-zrok">
           <SectionTitle
             eyebrow="The opportunity"
@@ -476,15 +444,11 @@ export default function Index() {
             description="Helping businesses automate repetitive tasks, save time, and scale faster."
           />
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {problems.map(([title, text, Icon]) => (
-              <article key={title as string} className="dark-card p-6">
+            {problems.map(([title, text, Icon]: [string, string, any]) => (
+              <article key={title} className="dark-card p-6">
                 <Icon size={20} className="text-[#2563EB]" />
-                <h3 className="mt-9 text-base font-semibold">
-                  {title as string}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-white/50">
-                  {text as string}
-                </p>
+                <h3 className="mt-9 text-base font-semibold">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/50">{text}</p>
               </article>
             ))}
           </div>
@@ -493,7 +457,7 @@ export default function Index() {
 
       <section
         id="services"
-        className="section border-y border-white/10 bg-white/[.018]"
+        className="py-16 md:py-20 border-y border-white/10 bg-white/[.018]"
       >
         <div className="container-zrok">
           <SectionTitle
@@ -502,25 +466,20 @@ export default function Index() {
             description="Focused automation capabilities, designed around the outcomes that matter to your business."
           />
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map(([title, text, Icon]) => (
-              <article key={title as string} className="dark-card group p-6">
+            {services.map(([title, Icon]: [string, any]) => (
+              <article key={title} className="dark-card group p-6">
                 <Icon
                   size={21}
                   className="text-[#2563EB] transition-transform group-hover:scale-110"
                 />
-                <h3 className="mt-8 text-base font-semibold">
-                  {title as string}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-white/50">
-                  {text as string}
-                </p>
+                <h3 className="mt-8 text-base font-semibold">{title}</h3>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="about" className="section">
+      <section id="about" className="py-16 md:py-20">
         <div className="container-zrok">
           <SectionTitle
             eyebrow="A clear process"
@@ -558,7 +517,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="section border-y border-white/10 bg-white/[.018]">
+      <section className="py-16 md:py-20 border-y border-white/10 bg-white/[.018]">
         <div className="container-zrok">
           <SectionTitle
             eyebrow="The Zrok difference"
@@ -606,7 +565,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="pt-16 md:pt-20">
         <div className="container-zrok">
           <SectionTitle
             eyebrow="Built for your world"
@@ -629,7 +588,7 @@ export default function Index() {
 
       {/* <section id="case-studies" className="section border-y border-white/10 bg-white/[.018]"><div className="container-zrok"><div className="flex flex-wrap items-end justify-between gap-6"><SectionTitle eyebrow="Selected impact" title="Case studies" description="Meaningful operational progress from systems built to perform." /><a className="button-secondary" href="#contact">See all work <ArrowRight size={15} /></a></div><div className="mt-14 grid gap-4 lg:grid-cols-3">{[["NOVA Growth", "Lead follow-up was entirely manual", "65%", "more qualified leads"],["Helix Health", "Patient intake lived across five tools", "90%", "less manual admin"],["Arbor Partners", "Reporting took days every month", "40%", "faster operations"]].map(([company, challenge, metric, result]) => <article key={company} className="dark-card overflow-hidden"><div className="flex h-40 items-end bg-[#2563EB]/10 p-6"><p className="text-xl font-semibold tracking-tight">{company}</p></div><div className="p-6"><p className="text-xs uppercase tracking-[.15em] text-white/35">Challenge</p><p className="mt-2 text-sm text-white/65">{challenge}</p><div className="mt-8 border-t border-white/10 pt-5"><p className="text-4xl font-semibold tracking-tight text-white">{metric}</p><p className="mt-1 text-sm text-white/45">{result}</p></div></div></article>)}</div></div></section> */}
 
-      <section className="section">
+      <section className="py-16 md:pt-24">
         <div className="container-zrok grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <SectionTitle
@@ -689,7 +648,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="contact" className="section">
+      <section id="contact" className="py-16 md:py-20">
         <div className="container-zrok grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <SectionTitle
