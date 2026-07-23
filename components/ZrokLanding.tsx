@@ -104,14 +104,46 @@ const problems = [
 ];
 
 const services = [
-  ["AI Agents", Bot],
-  ["Workflow Automation", Zap],
-  ["AI Chatbots", MessageSquareText],
-  ["Email Automation", Database],
-  ["Lead Generation Automation", Handshake],
-  ["CRM Integrations", Sparkles],
-  ["Data & Reporting Automation", PlugZap],
-  ["Custom AI Solutions", Code2],
+  [
+    "AI Agents",
+    "Intelligent AI agents that handle repetitive tasks, answer queries, and streamline business operations 24/7.",
+    Bot,
+  ],
+  [
+    "Workflow Automation",
+    "Automate manual workflows to eliminate repetitive work, improve efficiency, and save valuable time.",
+    Zap,
+  ],
+  [
+    "AI Chatbots",
+    "Deploy AI-powered chatbots that provide instant support, qualify leads, and engage customers around the clock.",
+    MessageSquareText,
+  ],
+  [
+    "Email Automation",
+    "Automate email campaigns, follow-ups, and customer communication to increase engagement and conversions.",
+    Database,
+  ],
+  [
+    "Lead Generation Automation",
+    "Capture, qualify, and organize leads automatically so your sales team can focus on closing deals.",
+    Handshake,
+  ],
+  [
+    "CRM Integrations",
+    "Connect your CRM with your favorite tools to keep customer data synchronized and workflows seamless.",
+    Sparkles,
+  ],
+  [
+    "Data & Reporting Automation",
+    "Generate real-time reports and automate data collection to make faster, data-driven business decisions.",
+    PlugZap,
+  ],
+  [
+    "Custom AI Solutions",
+    "Tailored AI automation solutions designed to solve your unique business challenges and support long-term growth.",
+    Code2,
+  ],
 ];
 
 const industries = [
@@ -128,23 +160,23 @@ const industries = [
 const faqs = [
   [
     "What types of businesses does Zrok work with?",
-    "We work with ambitious teams from growing startups to established service businesses. Our systems are tailored to your processes, technical environment, and business goals.",
+    "We work with businesses of all sizes across various industries, including startups, agencies, e-commerce, healthcare, real estate, finance, education, and professional services. If your business has repetitive processes, we can help automate them.",
   ],
   [
-    "How quickly can we launch an automation?",
-    "The timeline depends on the scope, but focused automations can typically move from discovery to launch in a few weeks. We prioritize high-impact improvements first.",
+    "What can Zrok automate?",
+    "We automate repetitive business tasks such as lead management, customer support, email workflows, CRM updates, appointment scheduling, document processing, reporting, data synchronization, and many other operational workflows.",
   ],
   [
     "Can Zrok integrate with our existing tools?",
-    "Yes. We design around your current stack and connect the tools your team relies on, from CRMs and project software to internal databases and AI platforms.",
+    "Yes. We integrate with hundreds of popular business platforms, including CRMs, email platforms, project management tools, communication apps, databases, and AI services. Our goal is to make your existing systems work together seamlessly.",
   ],
   [
-    "Will our team be able to manage the solution?",
-    "Absolutely. We document every system, train the relevant team members, and remain available to optimize and expand your automation as you grow.",
+    "How long does it take to implement an automation?",
+    "The timeline depends on the complexity of your project. Simple automations can be delivered within a few days, while more advanced AI solutions may take one to three weeks. We'll provide a clear timeline after understanding your requirements.",
   ],
   [
     "What happens after deployment?",
-    "We monitor performance, refine workflows, and identify opportunities for the next automation. The goal is lasting operational leverage, not a one-time handoff.",
+    "Our support doesn't end after launch. We provide testing, optimization, monitoring, and ongoing support to ensure your automation continues to perform reliably as your business grows.",
   ],
 ];
 
@@ -466,13 +498,14 @@ export default function Index() {
             description="Focused automation capabilities, designed around the outcomes that matter to your business."
           />
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map(([title, Icon]: [string, any]) => (
+            {services.map(([title, text, Icon]: [string, string, any]) => (
               <article key={title} className="dark-card group p-6">
                 <Icon
                   size={21}
                   className="text-[#2563EB] transition-transform group-hover:scale-110"
                 />
                 <h3 className="mt-8 text-base font-semibold">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/50">{text}</p>
               </article>
             ))}
           </div>
@@ -588,7 +621,7 @@ export default function Index() {
 
       {/* <section id="case-studies" className="section border-y border-white/10 bg-white/[.018]"><div className="container-zrok"><div className="flex flex-wrap items-end justify-between gap-6"><SectionTitle eyebrow="Selected impact" title="Case studies" description="Meaningful operational progress from systems built to perform." /><a className="button-secondary" href="#contact">See all work <ArrowRight size={15} /></a></div><div className="mt-14 grid gap-4 lg:grid-cols-3">{[["NOVA Growth", "Lead follow-up was entirely manual", "65%", "more qualified leads"],["Helix Health", "Patient intake lived across five tools", "90%", "less manual admin"],["Arbor Partners", "Reporting took days every month", "40%", "faster operations"]].map(([company, challenge, metric, result]) => <article key={company} className="dark-card overflow-hidden"><div className="flex h-40 items-end bg-[#2563EB]/10 p-6"><p className="text-xl font-semibold tracking-tight">{company}</p></div><div className="p-6"><p className="text-xs uppercase tracking-[.15em] text-white/35">Challenge</p><p className="mt-2 text-sm text-white/65">{challenge}</p><div className="mt-8 border-t border-white/10 pt-5"><p className="text-4xl font-semibold tracking-tight text-white">{metric}</p><p className="mt-1 text-sm text-white/45">{result}</p></div></div></article>)}</div></div></section> */}
 
-      <section className="py-16 md:pt-24">
+      <section className="py-16 md:pt-24" id="faq">
         <div className="container-zrok grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <SectionTitle
@@ -732,17 +765,22 @@ export default function Index() {
               </p>
             </div>
             {[
-              ["Company", "About", "Case studies", "Contact"],
+              ["Company", "About", "Contact"],
               ["Services", "AI Agents", "Automations", "Integrations"],
-              ["Resources", "Insights", "FAQ", "Privacy"],
+              ["Resources", "FAQ"],
             ].map(([heading, ...links]) => (
               <div key={heading}>
                 <p className="text-sm font-medium">{heading}</p>
+
                 <div className="mt-4 space-y-3">
                   {links.map((link) => (
                     <Link
                       key={link}
-                      href="#contact"
+                      href={
+                        heading === "Services"
+                          ? "#services"
+                          : `#${link.toLowerCase().replace(/\s+/g, "-")}`
+                      }
                       className="block text-sm text-white/45 transition-colors hover:text-white"
                     >
                       {link}
